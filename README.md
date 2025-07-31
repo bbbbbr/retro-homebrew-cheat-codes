@@ -6,7 +6,8 @@ GameBoy, GameBoyColor, GameGear, MegaDrive/Genesis, MegaDuck, NES, SMS, SNES
 
 # Data License
 
-All data in this repo and submitted to it is Public Domain
+All data contained and submitted to this repo is Public Domain.
+Re-use of it elsewhere is allowed.
 
 https://bbbbbr.github.io/retro-homebrew-cheat-codes
 
