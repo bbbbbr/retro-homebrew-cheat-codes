@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="UTF-8">
+  <title>Retro Homebrew / Indie Cheat Codes</title>
+  <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+
+  <script type="text/javascript" src="./data/cheat_entries.js"></script>
+  
+  <script type="text/javascript" src="./js/globals.js"></script>
+  <script type="text/javascript" src="./js/util.js"></script>
+  <script type="text/javascript" src="./js/gallery.js"></script>
+  <script type="text/javascript" src="./js/sorting.js"></script>
+  <script type="text/javascript" src="./js/filters.js"></script>
+  <script type="text/javascript" src="./js/gallery_items.js"></script>
+
+  <link rel="icon" type="image/x-icon" href="/icon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="./icon/gbdk_favicon_180x180.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="./icon/gbdk_favicon_48x48.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./icon/gbdk_favicon_32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./icon/gbdk_favicon_16x16.png">
+
+  <meta property="og:title"        content="Retro Homebrew / Indie Cheat Codes" />
+  <meta property="og:description"  content="Cheat codes for Homebrew / Indie games on retro consoles" />
+  <meta property="og:image:alt"    content="Cheat codes for Homebrew / Indie games on retro consoles" />
+  <meta property="og:url"          content="https://bbbbbr.github.io/retro-homebrew-cheat-codes/" />
+  <meta property="og:image"        content="/retro-homebrew-cheat-codes/social/social_preview.png" />
+  <meta property="og:image:width"  content="1280" />
+  <meta property="og:image:height" content="640" />
+  <meta property="og:twitter:card" content="summary_large_image" />
+</head>
+<body>
+
+<script>
+    // Try to detect mobile vs desktop to set font scaling
+    detectDeviceType();
+</script>
+<noscript>Javascript is required for viewing this page</noscript>
+
+<div class="header">
+    <div class="topbanner">
+        <h1>Retro Homebrew / Indie Cheat Codes</h1>
+
+        Cheat codes for Homebrew / Indie games on retro consoles
+        <br>        
+        Entries can be submitted on <a href="https://bbbbbr.github.io/retro-homebrew-cheat-codes/">Github</a>.        
+    </div>
+    <div class="filter_container">
+
+        <div class="filter_multi">
+            <select id="sortSelector"></select>
+            <span class="filter_span_button" id="whatsNewButton" name="whatsNewButton">Show What's New</span>
+        </div>
+
+        <div class="filter_multi">
+            <select id="cheatTypeTagsFilter"></select>
+        </div>
+
+        <div class="filter_multi">
+            <select id="consoleTagsFilter"></select>
+        </div>
+
+        <div class="filter_textsearch">
+            <input type="search" id="textSearch" name="textSearch" placeholder="search..."/>
+            <br>
+            <span id="numFoundResult" name="numFoundResult">0</span> found
+            <span class="filter_span_button" id="resetFilterButton" name="resetFilterButton">Reset</span>
+            <span class="filter_span_button" id="copyLinkFilterButton" name="copyLinkFilterButton">Copy Link</span>
+        </div>
+    </div>
+</div>
+
+<div class="gallery_container">
+    <div id="gallery_grid" class="gallery_grid">
+    </div>
+</div>
+
+
+</body></html>
