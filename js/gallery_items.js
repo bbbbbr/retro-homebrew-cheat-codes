@@ -26,6 +26,8 @@ function itemPopup(itemData) {
     content += "<hr><br>Indicator: <br>"     + itemData.dataset["activationIndicator"];
 
     popupShow(header, content);
+
+    return false;
 }
 
 
@@ -77,29 +79,24 @@ function createGalleryItems(galleryItems) {
         const consoleTagsCell = document.createElement('td');
         consoleTagsCell.className = 'consoleTags';
         consoleTagsCell.setAttribute('data-label','Type');
-            const consoleTagsmetaDiv = document.createElement('div');
-            consoleTagsmetaDiv.className = 'itemMeta';
+            const consoleTagsMetaDiv = document.createElement('div');
+            consoleTagsMetaDiv.className = 'itemMeta';
             item.consoleTags.split(', ').forEach(tag => {
-                attachClickFilter( appendSpan(tag,  "itemMetaConsoles",    consoleTagsmetaDiv), "consoleTagsFilter", tag);
+                attachClickFilter( appendSpan(tag,  "itemMetaConsoles",    consoleTagsMetaDiv), "consoleTagsFilter", tag);
             });
-            consoleTagsCell.appendChild(consoleTagsmetaDiv);
+            consoleTagsCell.appendChild(consoleTagsMetaDiv);
         itemTableRow.appendChild(consoleTagsCell);
 
         // Click for details button
         const detailsCell = document.createElement('td');
-        detailsCell.className = 'details';
-        detailsCell.setAttribute('data-label','details');
-
-            const detailsButton = document.createElement('button');
-            detailsButton.className = 'details';
-            detailsButton.textContent = "Details";
-            detailsCell.appendChild(detailsButton);
-
-            // Attach button click handler to show popup with item data
-            detailsButton.onclick = function() { itemPopup(itemTableRow); }
-
+        detailsCell.className = 'consoleTags';
+        detailsCell.setAttribute('data-label','Type');
+            const detailsMetaDiv = document.createElement('div');
+            detailsMetaDiv.className = 'itemMeta';
+            let detailsSpan = appendSpan("Details",  "itemMetaDetails",    detailsMetaDiv)
+            detailsSpan.onclick = function() { itemPopup(itemTableRow); }
+            detailsCell.appendChild(detailsMetaDiv);
         itemTableRow.appendChild(detailsCell);
-
 
 
         // Attach metadata to entry
@@ -122,6 +119,9 @@ function createGalleryItems(galleryItems) {
 
         // Attach the row to the table
         containerTable.appendChild(itemTableRow);
+
+        // Attach popup click handler to a cell in the row (could be entire row with "itemTableRow", but maybe that's too annoying)
+        cheatEffectCell.onclick = function() { itemPopup(itemTableRow); }
     });
 }
 

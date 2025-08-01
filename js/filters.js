@@ -169,13 +169,14 @@ function addFilterUpdateHooks() {
 }
 
 function attachClickFilter(element, filter_element_id, filtervalue) {
-    element.addEventListener('click', () => {
+    element.addEventListener('click', (event) => {
             let elFilter = document.getElementById(filter_element_id);
             if (elFilter.type && elFilter.type === 'checkbox')
                 elFilter.checked = filtervalue;
             else
                 elFilter.value = filtervalue;
             applyFilters();
+            event.stopPropagation();
             return false;
         });
 }
