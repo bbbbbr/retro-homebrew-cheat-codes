@@ -1,6 +1,6 @@
 
 function removeAllGalleryItems() {
-    const items = document.querySelectorAll('.gallery_grid_item');
+    const items = document.querySelectorAll('.gallery_tablerow_item');
     items.forEach(item => {
         item.remove();
     });
@@ -16,88 +16,112 @@ function addAndSortGalleryItems() {
 }
 
 
+function itemPopup(itemData) {
+
+    const header = itemData.dataset["gameTitle"];
+    var content = "";
+    content += "Effect: <br>"                + itemData.dataset["cheatEffect"];
+    content += "<hr><br>Code: <br>"          + itemData.dataset["inputSequence"];
+    content += "<hr><br>When to Input: <br>" + itemData.dataset["whenToInput"];
+    content += "<hr><br>Indicator: <br>"     + itemData.dataset["activationIndicator"];
+
+    popupShow(header, content);
+}
+
+
 // Convert gallery items to DOM elements
 function createGalleryItems(galleryItems) {
-    const container = document.getElementById('gallery_grid');
+    const containerTable = document.getElementById('data_table');
     galleryItems.forEach(item => {
 
-        // Create main div for each item
-        const itemDiv = document.createElement('div');
-        itemDiv.className = 'gallery_grid_item';
+        // Create main table row for each item
+        const itemTableRow = document.createElement('tr');
+        itemTableRow.className = 'gallery_tablerow_item';
 
-        // Create inner div for item details
-        const itemContainer = document.createElement('div');
-        itemContainer.className = 'itemContainer';
+        // gameTitle
+        const titleCell = document.createElement('td');
+        titleCell.className = 'gameTitle';
+        titleCell.textContent = item.gameTitle;
+        titleCell.setAttribute('data-label','Title');
+        itemTableRow.appendChild(titleCell);
+
+        // cheatTypeTags
+        const cheatTypeTagsCell = document.createElement('td');
+        cheatTypeTagsCell.className = 'cheatTypeTags';
+        cheatTypeTagsCell.setAttribute('data-label','Type');
+            const cheatTypeTagsMetaDiv = document.createElement('div');
+            cheatTypeTagsMetaDiv.className = 'itemMeta';
+            item.cheatTypeTags.split(', ').forEach(tag => {
+                attachClickFilter( appendSpan(tag,  "itemMetaCheatTypes",    cheatTypeTagsMetaDiv), "cheatTypeTagsFilter", tag);
+            });
+            cheatTypeTagsCell.appendChild(cheatTypeTagsMetaDiv);
+        itemTableRow.appendChild(cheatTypeTagsCell);
+
+        // cheatEffect
+        const cheatEffectCell = document.createElement('td');
+        cheatEffectCell.className = 'cheatEffect';
+        cheatEffectCell.textContent = item.cheatEffect;
+        cheatEffectCell.setAttribute('data-label','Effect');
+
+        itemTableRow.appendChild(cheatEffectCell);
+
+        // developer
+        const developerCell = document.createElement('td');
+        developerCell.className = 'developer';
+        developerCell.textContent = item.developer;
+        developerCell.setAttribute('data-label','Developer');
+
+        itemTableRow.appendChild(developerCell);
+
+        // consoleTags
+        const consoleTagsCell = document.createElement('td');
+        consoleTagsCell.className = 'consoleTags';
+        consoleTagsCell.setAttribute('data-label','Type');
+            const consoleTagsmetaDiv = document.createElement('div');
+            consoleTagsmetaDiv.className = 'itemMeta';
+            item.consoleTags.split(', ').forEach(tag => {
+                attachClickFilter( appendSpan(tag,  "itemMetaConsoles",    consoleTagsmetaDiv), "consoleTagsFilter", tag);
+            });
+            consoleTagsCell.appendChild(consoleTagsmetaDiv);
+        itemTableRow.appendChild(consoleTagsCell);
+
+        // Click for details button
+        const detailsCell = document.createElement('td');
+        detailsCell.className = 'details';
+        detailsCell.setAttribute('data-label','details');
+
+            const detailsButton = document.createElement('button');
+            detailsButton.className = 'details';
+            detailsButton.textContent = "Details";
+            detailsCell.appendChild(detailsButton);
+
+            // Attach button click handler to show popup with item data
+            detailsButton.onclick = function() { itemPopup(itemTableRow); }
+
+        itemTableRow.appendChild(detailsCell);
 
 
-        // Item Title
-        const titleDiv = document.createElement('div');
-        titleDiv.className = 'gameTitle';
-        titleDiv.textContent = item.gameTitle;
-        itemContainer.appendChild(titleDiv);
 
-        // Developer Name(s)
-        const developerDiv = document.createElement('div');
-        developerDiv.className   = 'developer';
-        developerDiv.textContent = item.developer;
-        itemContainer.appendChild(developerDiv);
-
-        // Short Description of Cheat Effect
-        const cheatEffectDiv = document.createElement('div');
-        cheatEffectDiv.className = 'cheatEffect';
-        cheatEffectDiv.textContent = item.cheatEffect;
-        itemContainer.appendChild(cheatEffectDiv);
-
-
-        // inputSequence
-        const inputSequenceDiv = document.createElement('div');
-        inputSequenceDiv.className   = 'inputSequence';
-        inputSequenceDiv.textContent = item.inputSequence;
-        itemContainer.appendChild(inputSequenceDiv);
-
-        // whenToInput
-        const whenToInputDiv = document.createElement('div');
-        whenToInputDiv.className   = 'whenToInput';
-        whenToInputDiv.textContent = item.whenToInput;
-        itemContainer.appendChild(whenToInputDiv);
-
-        // activationIndicator
-        const activationIndicatorDiv = document.createElement('div');
-        activationIndicatorDiv.className   = 'activationIndicator';
-        activationIndicatorDiv.textContent = item.activationIndicator;
-        itemContainer.appendChild(activationIndicatorDiv);
-
-
-        // Add Meta info footer with text cards
-        const metaDiv = document.createElement('div');
-        metaDiv.className = 'itemMeta';
-        // Attach the cards
-        item.consoleTags.split(', ').forEach(tag => {
-            attachClickFilter( appendSpan(tag,  "itemMetaConsoles",    metaDiv), "consoleTagsFilter", tag);
-        });
-        item.cheatTypeTags.split(', ').forEach(tag => {
-            attachClickFilter( appendSpan(tag,  "itemMetaCheatTypes",    metaDiv), "cheatTypeTagsFilter", tag);
-        });
-
-        itemContainer.appendChild(metaDiv);
-
-
-        // Attach metadata to entries
+        // Attach metadata to entry
         const tags = ['consoleTags', 'cheatTypeTags'];
         tags.forEach(tag => {
             const tagValue = item[tag];
             //if (tagValue) {
-                itemDiv.dataset[tag] = tagValue;
+                itemTableRow.dataset[tag] = tagValue;
             //}
         });
 
-        itemDiv.dataset["developer"]    = item.developer;
-        itemDiv.dataset["gameTitle"]    = item.gameTitle;
-        itemDiv.dataset["cheatEffect"]  = item.cheatEffect;
+        itemTableRow.dataset["developer"]    = item.developer;
+        itemTableRow.dataset["gameTitle"]    = item.gameTitle;
+        itemTableRow.dataset["cheatEffect"]  = item.cheatEffect;
 
-        // Append everything inside the main div
-        itemDiv.appendChild(itemContainer);
-        container.appendChild(itemDiv);
+        itemTableRow.dataset["whenToInput"]    = item.whenToInput;
+        itemTableRow.dataset["inputSequence"]    = item.inputSequence;
+        itemTableRow.dataset["activationIndicator"]  = item.activationIndicator;
+
+
+        // Attach the row to the table
+        containerTable.appendChild(itemTableRow);
     });
 }
 

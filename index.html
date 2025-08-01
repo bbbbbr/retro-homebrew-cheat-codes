@@ -7,6 +7,7 @@
 
   <script type="text/javascript" src="./data/cheat_entries.js"></script>
   
+  <script type="text/javascript" src="./js/popup.js"></script>
   <script type="text/javascript" src="./js/globals.js"></script>
   <script type="text/javascript" src="./js/util.js"></script>
   <script type="text/javascript" src="./js/gallery.js"></script>
@@ -37,13 +38,25 @@
 </script>
 <noscript>Javascript is required for viewing this page</noscript>
 
+<!-- Popup dialog -->
+<div id="modalBackdrop" class="modal-backdrop">
+    <div class="modal-dialog" role="dialog" aria-modal="true">
+        <button class="modal-close" aria-label="Close">&times;</button>
+        <h4 id="popup_header"></h4>
+        <div id="popup_body"></div>
+    </div>
+</div>
+
+
+<!-- Top filter and sorting area -->
 <div class="header">
     <div class="topbanner">
         <h1>Retro Homebrew / Indie Cheat Codes</h1>
 
         Cheat codes for Homebrew / Indie games on retro consoles
         <br>        
-        Entries can be submitted on <a href="https://github.com/bbbbbr/retro-homebrew-cheat-codes">Github</a>.        
+        Entries can be submitted on <a href="https://github.com/bbbbbr/retro-homebrew-cheat-codes">Github</a>.
+        Also see <a href="tools/entry_formatter.html">Entry Formatter</a>.
     </div>
     <div class="filter_container">
 
@@ -70,9 +83,30 @@
     </div>
 </div>
 
+
+<!-- Main list of cheats -->
 <div class="gallery_container">
-    <div id="gallery_grid" class="gallery_grid">
-    </div>
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Type</th>
+      <th scope="col">Effect</th>
+      <th scope="col">Developer</th>
+      <!-- This was too much data, moved it into a popup -->
+<!--
+      <th scope="col">When to Enter</th>
+      <th scope="col">Code</th>
+      <th scope="col">Indicator</th>
+ -->
+       <th scope="col">Console</th>
+       <th scope="col">Details</th>
+    </tr>
+  </thead>
+  <tbody  id="data_table">
+    <!-- Generated content goes here -->
+  </tbody>
+</table>
 </div>
 
 

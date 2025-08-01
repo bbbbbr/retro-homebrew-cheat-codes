@@ -104,7 +104,7 @@ function applyFilters() {
     const consoleTagsSelected   = Array.from(document.getElementById('consoleTagsFilter').selectedOptions).map(option => option.value);
     const cheatTypeTagsSelected = Array.from(document.getElementById('cheatTypeTagsFilter').selectedOptions).map(option => option.value);
     const textSearchMatch   = document.getElementById('textSearch').value;
-    const items = document.querySelectorAll('.gallery_grid_item');
+    const items = document.querySelectorAll('.gallery_tablerow_item');
 
     // TODO: ? Convert filters from arrays to simple compares now that they are single-select instead of multi-select
 

@@ -9,6 +9,9 @@ function loadItems() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+
+    popupInit();
+
     loadItems();
 
     addAndSortGalleryItems();

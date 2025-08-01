@@ -10,6 +10,10 @@
     --header_control_color:  rgba(0,0,0, 0.80);
     --header_control_bg:     rgba(0, 0, 0, 0.04);
     --header_control_border: rgba(128,128,128,0.75);
+    --header_control_border_faded: rgba(128,128,128,0.50);
+
+    --popup_modal_background: rgba(0,0,0,0.3);
+    --popup_bg_base: rgb(255,255,255);
 
     /* Filter styling */
     --filter_reset_bg:            rgba(0,0,0,0.07);
@@ -47,7 +51,10 @@
         --header_control_color:  var(--header_color);
         --header_control_bg:     rgba(0, 0, 0, 0.24);
         --header_control_border: rgba(128,128,128,0.5);
+        --header_control_border_faded: rgba(128,128,128,0.25);
 
+        --popup_modal_background: rgba(255,255,255,0.1);
+        --popup_bg_base: rgb(32,32,32);
 
         /* Filter styling */
         --filter_reset_bg:            rgba(255,255,255,0.07);
@@ -75,9 +82,17 @@
 }
 
 body {
-  background: var(--main_bg);
-  margin: 0 auto;
-  font-family: sans-serif;
+    background: var(--main_bg);
+    margin: 0 auto;
+    font-family: sans-serif;
+
+    --data_area_bg_color:    var(--header_bg);
+    --data_area_title_color: var(--header_color);
+    --data_area_border:      var(--header_control_border_faded);
+
+    --popup_bg_color:    var(--header_bg);
+    --popup_title_color: var(--header_color);
+    --popup_border:      var(--header_control_border_faded);
 }
 
 
@@ -132,54 +147,11 @@ select, checkbox, input {
 
 
 
-.gallery_container {
-    padding: 0.5em;
-}
-
-.gallery_grid {
-  /* Grid Fallback */
-  display: flex;
-  flex-wrap: wrap;
-
-  /* Supports Grid */
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  grid-auto-rows: max-content;
-  column-gap: 0.75em;
-  row-gap: 2em;
-}
-
-.gallery_grid_item {
-  display: flex;
-  align-items: start;  /* Top align child divs */
-  justify-content: center;
-
-  /* Flex Fallback */
-  margin-left: 5px;
-  margin-right: 5px;
-  flex: 1 1 200px;
-}
-
-/* If Grid is supported, remove the margin we set for the fallback */
-@supports (display: grid) {
-  .gallery_grid_item {
-    margin: 0;
-  }
-}
-
-.itemContainer {
-    width: 320px;
-}
-
-    .itemPreview {
-    width: 320px;
-}
-
-
 
 .gameTitle {
     font-weight: bold;
-    color: var(--item_body_color);
+    color: var(--item_body_color_light);
+    /*color: var(--item_body_color);*/
 }
 
 .developer,
@@ -188,8 +160,13 @@ select, checkbox, input {
 .inputSequence,
 .whenToInput,
 .activationIndicator {
+    font-weight: normal;
     font-size: .875em;
     color: var(--item_body_color_light);
+}
+
+.revealedHeading {
+    font-weight: bold;
 }
 
 .itemLinks > a {
@@ -216,24 +193,6 @@ select, checkbox, input {
     background: var(--item_meta_bg_blue);
 }
 
-/*
-.itemMetaOpenSource {
-    color: var(--item_meta_text);
-    background: var(--item_meta_bg_green);
-}
-.itemMetaSupportsLink {
-    color: var(--item_meta_text);
-    background: var(--item_meta_bg_pink);
-}
-.itemMetaHardwareFeatures {
-    color: var(--item_meta_text);
-    background: var(--item_meta_bg_orange);
-}
-.itemMetaEngine {
-    color: var(--item_meta_text);
-    background: var(--item_meta_bg_purple);
-}
-*/
 
 
 /* *** Form controls ***  */
@@ -287,3 +246,129 @@ span.filter_span_button:hover {
     color: var(--filter_reset_text_hover);
 }
 
+
+/* Responsive Table formatting */
+
+
+table {
+    border: 1px solid var(--data_area_border);
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+
+table caption {
+    /*font-size: 1.5em;*/
+    margin: .5em 0 .75em;
+}
+
+table tr {
+    color: var(--header_color);
+    background-color: var(--data_area_bg_color);
+    border: 1px solid var(--data_area_border);
+    padding: .35em;
+}
+
+table th,
+table td {
+    padding: .625em;
+}
+
+table th {
+    /*font-size: .85em;*/
+    /*letter-spacing: .1em;*/
+    text-transform: uppercase;
+    text-align: left;
+}
+
+@media screen and (max-width: 1024px) {
+    table {
+        border: 0;
+    }
+
+    table caption {
+        /*font-size: 1.3em;*/
+    }
+
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    table tr {
+        border-bottom: 3px solid var(--data_area_border);
+        display: block;
+        margin-bottom: .625em;
+    }
+
+    table td {
+        border-bottom: 1px solid var(--data_area_border);
+        display: block;
+        /*font-size: .8em;*/
+        text-align: right;
+    }
+
+    table td::before {
+        /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    table td:last-child {
+        border-bottom: 0;
+    }
+}
+
+
+/* Modal popup */
+
+.modal-backdrop {    
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    height: 100vh; width: 100vw;
+    background: var(--popup_modal_background);
+    align-items: center;
+    justify-content: center;
+}
+.modal-backdrop.active {
+    display: flex;
+}
+.modal-dialog {
+    color: var(--popup_title_color);
+    background: var(--popup_bg_base);
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 6px 40px rgba(0,0,0,0.16);
+    min-width: 260px;
+    max-width: 95vw;
+    position: relative;
+    animation: fadeIn 0.2s;
+}
+.modal-close {
+    color: var(--popup_title_color);
+    position: absolute;
+    top: 1rem; right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-30px);}
+    to   { opacity: 1; transform: none;}
+}

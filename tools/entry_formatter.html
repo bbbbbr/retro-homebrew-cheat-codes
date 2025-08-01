@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Cheat / Secret Code Entry Formatter</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    label { display: block; margin-top: 15px; }
+    .caption { color: #555; font-size: 90%; margin-left: 8px; }
+    textarea { vertical-align: middle; }
+    input, textarea { margin-top: 2px; width: 60%; }
+    pre { background: #f3f3f3; padding: 10px; border: 1px dashed rgba(0,0,0,0.5); }
+  </style>
+</head>
+<body>
+  <h2>Cheat / Secret Code Entry Formatter</h2>
+  <form id="cheatForm">
+    <label>
+      Game Title:
+      <input type="text" name="gameTitle" required>
+      <br><span class="caption">Game's Title</span>
+    </label>
+    <label>
+      Developer:
+      <input type="text" name="developer" required>
+      <br><span class="caption">Name(s) of Developer(s)</span>
+    </label>
+    <label>
+      Console Tags:
+      <input type="text" name="consoleTags" required>
+      <br><span class="caption">Comma separated list of tags: GameBoy, GameBoyColor, GameGear, MegaDrive/Genesis, MegaDuck, NES, SMS, SNES, Neo Geo</span>
+    </label>
+    <label>
+      Cheat Type Tags:
+      <input type="text" name="cheatTypeTags" required>
+      <br><span class="caption">Comma separated list of tags such as: lives, invincibility, continues, alter gameplay, level select, debug mode</span>
+    </label>
+    <label>
+      Cheat Effect:
+      <input type="text" name="cheatEffect" required>
+      <br><span class="caption">Short description of the effect</span>
+    </label>
+    <label>
+      Input Sequence:
+      <input type="text" name="inputSequence" required>
+      <br><span class="caption">UPPERCASE, comma delimited list of button presses for activating the cheat</span>
+    </label>
+    <label>
+      When To Input:
+      <input type="text" name="whenToInput" required>
+      <br><span class="caption">When/where to input the cheat</span>
+    </label>
+    <label>
+      Activation Indicator:
+      <input type="text" name="activationIndicator" required>
+      <br><span class="caption">Any indicators the game makes when the cheat is activated (blank if none or covered by Effect)</span>
+    </label>
+    <label>
+      Date Added:
+      <input type="date" name="dateAdded" required>
+      <br><span class="caption">Date in YYYY-MM-DD format the entry is being added, for example: 2025-07-31</span>
+    </label>
+    <br>
+    <button type="button" onclick="formToJSON()">Convert to JSON</button>
+  </form>
+  <h3>Resulting JSON</h3>
+  <pre id="output"></pre>
+
+  <script>
+    function formToJSON() {
+      const form = document.getElementById('cheatForm');
+      const formData = new FormData(form);
+      const obj = {};
+      for (const [key, value] of formData.entries()) {
+        obj[key] = value;
+      }
+      document.getElementById('output').textContent = JSON.stringify(obj, null, 4) + ",\n\n";
+    }
+  </script>
+</body>
+</html>
