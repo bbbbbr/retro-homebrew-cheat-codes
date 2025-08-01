@@ -85,8 +85,19 @@ const jsonCheatEntries = [
     "inputSequence": "UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT, B, A, START",
     "whenToInput": "Title screen",
     "activationIndicator": "",
-    "dateAdded": "2025-07-09"
-}
+    "dateAdded": "2025-07-31"
+},
 
+{
+    "gameTitle": "Flying Arrows",
+    "developer": "Studio Loading",
+    "consoleTags": "Game Boy",
+    "cheatTypeTags": "Powers",
+    "cheatEffect": "Player starts with all amulets",
+    "inputSequence": "A, B, RIGHT, DOWN, LEFT, UP, START",
+    "whenToInput": "Title screen",
+    "activationIndicator": "Title screen music will stop",
+    "dateAdded": "2025-08-01"
+},
 
 ];
