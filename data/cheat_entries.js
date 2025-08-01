@@ -69,10 +69,10 @@ const jsonCheatEntries = [
     "developer": "Matt Hughson",
     "consoleTags": "NES",
     "cheatTypeTags": "Sound Test",
-    "cheatEffect": "Prints an image for any unlocked trophy from the Game Boy Printer",
+    "cheatEffect": " You will hear a ding and be taken to the sound test immediately.",
     "inputSequence": "Enter the Konami Code: UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT, B, A, START",
     "whenToInput": "Title screen",
-    "activationIndicator": "You will hear a ding and be taken to the sound test immediately",
+    "activationIndicator": "",
     "dateAdded": "2025-07-31",
 },
 

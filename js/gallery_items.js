@@ -78,7 +78,7 @@ function createGalleryItems(galleryItems) {
         // consoleTags
         const consoleTagsCell = document.createElement('td');
         consoleTagsCell.className = 'consoleTags';
-        consoleTagsCell.setAttribute('data-label','Type');
+        consoleTagsCell.setAttribute('data-label','Console');
             const consoleTagsMetaDiv = document.createElement('div');
             consoleTagsMetaDiv.className = 'itemMeta';
             item.consoleTags.split(', ').forEach(tag => {
@@ -90,7 +90,7 @@ function createGalleryItems(galleryItems) {
         // Click for details button
         const detailsCell = document.createElement('td');
         detailsCell.className = 'consoleTags';
-        detailsCell.setAttribute('data-label','Type');
+        detailsCell.setAttribute('data-label','Details');
             const detailsMetaDiv = document.createElement('div');
             detailsMetaDiv.className = 'itemMeta';
             let detailsSpan = appendSpan("Details",  "itemMetaDetails",    detailsMetaDiv)
