@@ -4,7 +4,7 @@ const jsonCheatEntries = [
 {
     "gameTitle": "Canyon Racer",
     "developer": "bbbbbr",
-    "consoleTags": "GameBoy",
+    "consoleTags": "Game Boy",
     "cheatTypeTags": "Lives",
     "cheatEffect": "Lives start at 88 instead of 10",
     "inputSequence": "UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT, B, A, START",
@@ -16,7 +16,7 @@ const jsonCheatEntries = [
 {
     "gameTitle": "Petris",
     "developer": "bbbbbr",
-    "consoleTags": "GameBoyColor",
+    "consoleTags": "Game Boy Color",
     "cheatTypeTags": "Alter gameplay",
     "cheatEffect": "Pressing Up during gameplay allows changing pet type/color of current piece",
     "inputSequence": "UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT, B, A, START",
@@ -28,7 +28,7 @@ const jsonCheatEntries = [
 {
     "gameTitle": "Marron's Day",
     "developer": "npckc",
-    "consoleTags": "GameBoy",
+    "consoleTags": "Game Boy",
     "cheatTypeTags": "Game Boy Printer",
     "cheatEffect": "Prints an image for any unlocked trophy from the Game Boy Printer",
     "inputSequence": "Plug in Game Boy Printer to your Game Boy before pressing A to interact with any trophy in the trophy room",
@@ -103,7 +103,7 @@ const jsonCheatEntries = [
 {
     "gameTitle": "Anguna: Warriors of Virtue",
     "developer": "Bite the Chili Productions",
-    "consoleTags": "Gameboy Advance",
+    "consoleTags": "Game Boy Advance",
     "cheatTypeTags": "Power-ups",
     "cheatEffect": "Gain all powerups",
     "inputSequence": "UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT, B, A, START",
