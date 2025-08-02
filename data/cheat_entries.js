@@ -92,11 +92,23 @@ const jsonCheatEntries = [
     "gameTitle": "Flying Arrows",
     "developer": "Studio Loading",
     "consoleTags": "Game Boy",
-    "cheatTypeTags": "Powers",
+    "cheatTypeTags": "Power-Ups",
     "cheatEffect": "Player starts with all amulets",
     "inputSequence": "A, B, RIGHT, DOWN, LEFT, UP, START",
     "whenToInput": "Title screen",
     "activationIndicator": "Title screen music will stop",
+    "dateAdded": "2025-08-01"
+},
+
+{
+    "gameTitle": "Anguna: Warriors of Virtue",
+    "developer": "Bite the Chili Productions",
+    "consoleTags": "Gameboy Advance",
+    "cheatTypeTags": "Power-Ups",
+    "cheatEffect": "Gain all powerups",
+    "inputSequence": "UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT, B, A, START",
+    "whenToInput": "From the in-game subscreen",
+    "activationIndicator": "You will have a huge health bar and max items",
     "dateAdded": "2025-08-01"
 },
 
