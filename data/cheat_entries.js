@@ -70,7 +70,7 @@ const jsonCheatEntries = [
     "consoleTags": "NES",
     "cheatTypeTags": "Sound Test",
     "cheatEffect": " You will hear a ding and be taken to the sound test immediately.",
-    "inputSequence": "Enter the Konami Code: UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT, B, A, START (Konami code)",
+    "inputSequence": "UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT, B, A, START (Konami code)",
     "whenToInput": "Title screen",
     "activationIndicator": "",
     "dateAdded": "2025-07-31",
