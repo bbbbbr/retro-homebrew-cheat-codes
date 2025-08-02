@@ -124,4 +124,16 @@ const jsonCheatEntries = [
     "dateAdded": "2025-08-02"
 },
 
+{
+    "gameTitle": "Hermano",
+    "developer": "Pat Morita Team",
+    "consoleTags": "Game Boy",
+    "cheatTypeTags": "Lives",
+    "cheatEffect": "Get 99 lives and infinite credits",
+    "inputSequence": "A+B+SELECT+UP+LEFT",
+    "whenToInput": "Continue screen",
+    "activationIndicator": "Credits hud will display infinite symbol",
+    "dateAdded": "2025-08-02"
+},
+
 ];
