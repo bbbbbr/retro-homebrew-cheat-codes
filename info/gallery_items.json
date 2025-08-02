@@ -5,7 +5,7 @@ The JSON format for a cheat entry is as follows:
     "gameTitle": "Game's Title",
     "developer": "Name(s) of Developer(s)",
     "consoleTags": "Comma separated list of tags: GameBoy, GameBoyColor, GameGear, MegaDrive/Genesis, MegaDuck, NES, SMS, SNES, Neo Geo",
-    "cheatTypeTags": "Comma separated list of tags such as: lives, invincibility, continues, alter gameplay, level select, debug mode",
+    "cheatTypeTags": "Comma separated list of tags such as: Lives, Power-ups, Invincibility, Continues, Alter gameplay, Level select, Debug mode",
     "cheatEffect": "Short description of the effect",
     "inputSequence": "UPPERCASE, comma delimited list of button presses for activating the cheat",
     "whenToInput": "When/where to input the cheat",
