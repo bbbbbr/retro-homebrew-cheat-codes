@@ -7,7 +7,7 @@ const jsonCheatEntries = [
     "consoleTags": "Game Boy",
     "cheatTypeTags": "Lives",
     "cheatEffect": "Lives start at 88 instead of 10",
-    "inputSequence": "UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT, B, A, START",
+    "inputSequence": "UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT, B, A, START (Konami code)",
     "whenToInput": "Title Screen",
     "activationIndicator": "Sound chime on entry. Game score shows 888888",
     "dateAdded": "2025-07-30",
@@ -19,7 +19,7 @@ const jsonCheatEntries = [
     "consoleTags": "Game Boy Color",
     "cheatTypeTags": "Alter gameplay",
     "cheatEffect": "Pressing Up during gameplay allows changing pet type/color of current piece",
-    "inputSequence": "UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT, B, A, START",
+    "inputSequence": "UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT, B, A, START (Konami code)",
     "whenToInput": "Title Screen",
     "activationIndicator": "Sound chime on entry",
     "dateAdded": "2025-07-30",
@@ -70,7 +70,7 @@ const jsonCheatEntries = [
     "consoleTags": "NES",
     "cheatTypeTags": "Sound Test",
     "cheatEffect": " You will hear a ding and be taken to the sound test immediately.",
-    "inputSequence": "Enter the Konami Code: UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT, B, A, START",
+    "inputSequence": "Enter the Konami Code: UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT, B, A, START (Konami code)",
     "whenToInput": "Title screen",
     "activationIndicator": "",
     "dateAdded": "2025-07-31",
@@ -82,7 +82,7 @@ const jsonCheatEntries = [
     "consoleTags": "NES",
     "cheatTypeTags": "Graphics",
     "cheatEffect": "Switches the graphics to the original Atari player sprites",
-    "inputSequence": "UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT, B, A, START",
+    "inputSequence": "UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT, B, A, START (Konami code)",
     "whenToInput": "Title screen",
     "activationIndicator": "",
     "dateAdded": "2025-07-31"
@@ -106,7 +106,7 @@ const jsonCheatEntries = [
     "consoleTags": "Game Boy Advance",
     "cheatTypeTags": "Power-ups",
     "cheatEffect": "Gain all powerups",
-    "inputSequence": "UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT, B, A, START",
+    "inputSequence": "UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT, B, A, START (Konami code)",
     "whenToInput": "From the in-game subscreen",
     "activationIndicator": "You will have a huge health bar and max items",
     "dateAdded": "2025-08-01"
@@ -133,6 +133,18 @@ const jsonCheatEntries = [
     "inputSequence": "A+B+SELECT+UP+LEFT",
     "whenToInput": "Continue screen",
     "activationIndicator": "Credits hud will display infinite symbol",
+    "dateAdded": "2025-08-02"
+},
+
+{
+    "gameTitle": "Monkey Knife Fight",
+    "developer": "Space Mouse",
+    "consoleTags": "Game Boy",
+    "cheatTypeTags": "Level",
+    "cheatEffect": "Level select screen",
+    "inputSequence": "UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT, B, A, START (Konami code)",
+    "whenToInput": "Title Screen",
+    "activationIndicator": "Level select screen will open",
     "dateAdded": "2025-08-02"
 },
 
