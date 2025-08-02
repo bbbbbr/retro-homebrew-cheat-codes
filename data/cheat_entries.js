@@ -139,7 +139,7 @@ const jsonCheatEntries = [
 {
     "gameTitle": "Monkey Knife Fight",
     "developer": "Space Mouse",
-    "consoleTags": "Game Boy",
+    "consoleTags": "Game Boy Color",
     "cheatTypeTags": "Level",
     "cheatEffect": "Level select screen",
     "inputSequence": "UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT, B, A, START (Konami code)",
