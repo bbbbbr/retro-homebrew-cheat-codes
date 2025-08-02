@@ -1,6 +1,6 @@
 # Cheat and Secret Codes for Retro Console Homebrew/Indie Games
 A collection of cheat codes for Homebrew / Indie games on the following retro consoles:
-GameBoy, GameBoyColor, GameGear, MegaDrive/Genesis, MegaDuck, NES, SMS, SNES
+GameBoy, GameBoyColor, GBA, GameGear, MegaDrive/Genesis, MegaDuck, NES, SMS, SNES
 
 
 # Data License
