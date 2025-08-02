@@ -112,4 +112,16 @@ const jsonCheatEntries = [
     "dateAdded": "2025-08-01"
 },
 
+{
+    "gameTitle": "Tobu Tobu Girl Deluxe",
+    "developer": "Tangram Games",
+    "consoleTags": "Game Boy, Game Boy Color",
+    "cheatTypeTags": "Clear Save",
+    "cheatEffect": "Clears all save data",
+    "inputSequence": "Hold down together: DOWN + SELECT + B",
+    "whenToInput": "Title Screen",
+    "activationIndicator": "Sound stops, Erase screen opens",
+    "dateAdded": "2025-08-02"
+},
+
 ];
