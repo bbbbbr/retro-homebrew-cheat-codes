@@ -22,7 +22,7 @@ Game Genie / Game Shark type codes which modify ROM, RAM, SRAM, etc.
 To submit a game or program, either :
 - Open an [Issue](https://github.com/bbbbbr/retro-homebrew-cheat-codes/issues)
 - Or edit the JSON data and open a Pull Request
-  - The [Entry Formatter](https://bbbbbr.github.io/retro-homebrew-cheat-codes/entry_formatter.html) is recommended
+  - The [Entry Formatter](https://bbbbbr.github.io/retro-homebrew-cheat-codes/tools/entry_formatter.html) is recommended
 
 
 # Why?
