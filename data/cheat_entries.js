@@ -7,7 +7,7 @@ const jsonCheatEntries = [
     "consoleTags": "Game Boy",
     "cheatTypeTags": "Lives",
     "cheatEffect": "Lives start at 88 instead of 10",
-    "inputSequence": "UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT, B, A, START (Konami code)",
+    "inputSequence": "UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT, B, A (Konami code)",
     "whenToInput": "Title Screen",
     "activationIndicator": "Sound chime on entry. Game score shows 888888",
     "dateAdded": "2025-07-30",
@@ -19,7 +19,7 @@ const jsonCheatEntries = [
     "consoleTags": "Game Boy Color",
     "cheatTypeTags": "Alter gameplay",
     "cheatEffect": "Pressing Up during gameplay allows changing pet type/color of current piece",
-    "inputSequence": "UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT, B, A, START (Konami code)",
+    "inputSequence": "UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT, B, A (Konami code)",
     "whenToInput": "Title Screen",
     "activationIndicator": "Sound chime on entry",
     "dateAdded": "2025-07-30",
@@ -128,7 +128,7 @@ const jsonCheatEntries = [
     "gameTitle": "Hermano",
     "developer": "Pat Morita Team",
     "consoleTags": "Game Boy",
-    "cheatTypeTags": "Lives",
+    "cheatTypeTags": "Lives, Continues",
     "cheatEffect": "Get 99 lives and infinite credits",
     "inputSequence": "A+B+SELECT+UP+LEFT",
     "whenToInput": "Continue screen",
@@ -146,6 +146,18 @@ const jsonCheatEntries = [
     "whenToInput": "Title Screen",
     "activationIndicator": "Level select screen will open",
     "dateAdded": "2025-08-02"
+},
+
+{
+    "gameTitle": "Athletic World",
+    "developer": "MHZ",
+    "consoleTags": "Game Boy",
+    "cheatTypeTags": "Lives, Continues",
+    "cheatEffect": "Get 9 lives and 5 continues",
+    "inputSequence": "UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT, B, A (Konami code)",
+    "whenToInput": "On the titlescreen",
+    "activationIndicator": "A jingle will play and a snake will be seen crawling on-screen",
+    "dateAdded": "2025-08-03"
 },
 
 ];
