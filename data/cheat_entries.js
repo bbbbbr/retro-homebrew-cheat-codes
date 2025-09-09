@@ -196,4 +196,16 @@ const jsonCheatEntries = [
     "dateAdded": "2025-09-08"
 },
 
+{
+    "gameTitle": "OutRun GB",
+    "developer": "EGVroom",
+    "consoleTags": "Game Boy Color",
+    "cheatTypeTags": "Sound Test",
+    "cheatEffect": "Access music debug menu",
+    "inputSequence": "LEFT, LEFT, LEFT, LEFT",
+    "whenToInput": "Title Screen",
+    "activationIndicator": "Chime",
+    "dateAdded": "2025-09-08"
+},
+
 ];
