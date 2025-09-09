@@ -160,4 +160,40 @@ const jsonCheatEntries = [
     "dateAdded": "2025-08-03"
 },
 
+{
+    "gameTitle": "Retroid",
+    "developer": "Jonas Fischbach",
+    "consoleTags": "Game Boy",
+    "cheatTypeTags": "Lives, Skip",
+    "cheatEffect": "99 lives and allow stage skip",
+    "inputSequence": "Set the number of lives to zero. Move the cursor to \"Exit\". Hold the LEFT and SELECT buttons, then press START. The next game will start with 99 lives. Press SELECT after launching a ball to open the gate to the next stage.",
+    "whenToInput": "Options menu",
+    "activationIndicator": "A double-chime will play",
+    "dateAdded": "2025-09-08"
+},
+
+{
+    "gameTitle": "Princess and Wizard: Town of Labu",
+    "developer": "redoctorok",
+    "consoleTags": "Game Boy",
+    "cheatTypeTags": "Skip",
+    "cheatEffect": "Skip Cutscenes",
+    "inputSequence": "Press SELECT 3 times",
+    "whenToInput": "Start Screen",
+    "activationIndicator": "",
+    "dateAdded": "2025-09-08"
+},
+
+{
+    "gameTitle": "Princess and Wizard: Town of Labu",
+    "developer": "redoctorok",
+    "consoleTags": "Game Boy",
+    "cheatTypeTags": "Skip",
+    "cheatEffect": "Skip directly to Boss",
+    "inputSequence": "Press SELECT 6 times",
+    "whenToInput": "Start Screen",
+    "activationIndicator": "",
+    "dateAdded": "2025-09-08"
+},
+
 ];
