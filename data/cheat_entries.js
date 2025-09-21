@@ -208,4 +208,16 @@ const jsonCheatEntries = [
     "dateAdded": "2025-09-08"
 },
 
+    {
+    "gameTitle": "Yap and the Enchanted Bubbles",
+    "developer": "CeL",
+    "consoleTags": "Game Boy Color",
+    "cheatTypeTags": "Unlock",
+    "cheatEffect": "Unlock Puzzle entry in Main Menu (allows further mode unlock)",
+    "inputSequence": "UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT, B, A (Konami code)",
+    "whenToInput": "Credits Screen (via Main Menu)",
+    "activationIndicator": "Chime",
+    "dateAdded": "2025-09-21"
+},
+
 ];
