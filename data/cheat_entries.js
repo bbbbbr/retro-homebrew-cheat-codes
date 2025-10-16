@@ -208,7 +208,7 @@ const jsonCheatEntries = [
     "dateAdded": "2025-09-08"
 },
 
-    {
+{
     "gameTitle": "Yap and the Enchanted Bubbles",
     "developer": "CeL",
     "consoleTags": "Game Boy Color",
@@ -218,6 +218,18 @@ const jsonCheatEntries = [
     "whenToInput": "Credits Screen (via Main Menu)",
     "activationIndicator": "Chime",
     "dateAdded": "2025-09-21"
+},
+
+{
+    "gameTitle": "Den Of Snakes",
+    "developer": "bbbbbr",
+    "consoleTags": "Game Boy",
+    "cheatTypeTags": "Alter gameplay",
+    "cheatEffect": "Changes game to SNAFU style (tron light-cycle like)",
+    "inputSequence": "UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT, B, A (Konami code)",
+    "whenToInput": "Title Screen",
+    "activationIndicator": "Sound chime on entry",
+    "dateAdded": "2025-10-15",
 },
 
 ];
